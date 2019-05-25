@@ -116,12 +116,6 @@ def pipeline_test(train, test, lim_unigram):
 
     Process test set
 
-    Args:
-        test: FNCData object, test set
-        bow_vectorizer: sklearn CountVectorizer
-        tfreq_vectorizer: sklearn TfidfTransformer(use_idf=False)
-        tfidf_vectorizer: sklearn TfidfVectorizer()
-
     Returns:
         test_set: list, of numpy arrays
 
