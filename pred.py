@@ -30,11 +30,6 @@ r = random.Random()
 lim_unigram = 5000
 target_size = 4
 hidden_size = 100
-train_keep_prob = 0.6
-learn_rate = 0.01
-clip_ratio = 5
-batch_size_train = 500
-epochs = 90
 
 
 # Load data sets
@@ -43,10 +38,8 @@ raw_test = FNCData(file_test_instances, file_test_bodies)
 
 
 # Process data sets
-train_set, _, bow_vectorizer, tfreq_vectorizer, tfidf_vectorizer = \
-    pipeline_train(raw_train, raw_test, lim_unigram=lim_unigram)
-feature_size = len(train_set[0])    # 10001
-test_set = pipeline_test(raw_test, bow_vectorizer, tfreq_vectorizer, tfidf_vectorizer)
+feature_size = 10001
+test_set = pipeline_test(raw_train, raw_test, lim_unigram=lim_unigram)
 
 # Define model
 
